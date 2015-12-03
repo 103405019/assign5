@@ -29,7 +29,7 @@ boolean isHit(int aX, int aY, int aW, int aH, int bX,int bY, int bW, int bH)
   }
 
 void setup () {
-  size(1200, 480) ;
+  size(640, 480) ;
   start1=loadImage("img/start1.png");
   start2=loadImage("img/start2.png");
   bg1=loadImage("img/bg1.png");
@@ -383,7 +383,7 @@ int i=floor((currentFrame++)/6%5);
    image(hp, 15, 15);
    if(hps<=0){
     hps=0;
-  //  gameState=END;
+    gameState=END;
     }
     
 
