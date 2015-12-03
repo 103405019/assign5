@@ -29,7 +29,7 @@ boolean isHit(int aX, int aY, int aW, int aH, int bX,int bY, int bW, int bH)
   }
 
 void setup () {
-  size(640, 480) ;
+  size(1200, 480) ;
   start1=loadImage("img/start1.png");
   start2=loadImage("img/start2.png");
   bg1=loadImage("img/bg1.png");
@@ -175,7 +175,7 @@ int i=floor((currentFrame++)/6%5);
         hps-=2*199/10;}
    for(int c=0; c<5; c++){
    if(shooting[c]==true){
-   EnemyBulletHit=isHit(enX, enY, 60, 60, shX, shY, 30, 30);
+   EnemyBulletHit=isHit(enX, enY, 60, 60, bullet[c][0], bullet[c][1], 30, 30);
    if(EnemyBulletHit==true){
         showing[n]=false;
         shooting[c]=false;shX=2000;
@@ -213,9 +213,9 @@ int i=floor((currentFrame++)/6%5);
         explode[n]=true;
         currentFrame=0;
         hps-=2*199/10;}
-   for(int c=0; c<5; c++){
-   if(shooting[c]==true){
-   EnemyBulletHit=isHit(enX, enY, 60, 60, shX, shY, 30, 30);
+     for(int c=0; c<5; c++){
+     if(shooting[c]==true){
+   EnemyBulletHit=isHit(enX, enY, 60, 60, bullet[c][0], bullet[c][1], 30, 30);
    if(EnemyBulletHit==true){
         showing[n]=false;
         shooting[c]=false;shX=2000;
@@ -255,7 +255,7 @@ int i=floor((currentFrame++)/6%5);
         hps-=2*199/10;}
    for(int c=0; c<5; c++){
    if(shooting[c]==true){
-   EnemyBulletHit=isHit(enX, enY, 60, 60, shX, shY, 30, 30);
+   EnemyBulletHit=isHit(enX, enY, 60, 60, bullet[c][0], bullet[c][1], 30, 30);
    if(EnemyBulletHit==true){
         showing[n]=false;
         shooting[c]=false;shX=2000;
@@ -291,7 +291,7 @@ int i=floor((currentFrame++)/6%5);
         hps-=2*199/10;}
    for(int c=0; c<5; c++){
    if(shooting[c]==true){
-   EnemyBulletHit=isHit(enX, enY, 60, 60, shX, shY, 30, 30);
+   EnemyBulletHit=isHit(enX, enY, 60, 60, bullet[c][0], bullet[c][1], 30, 30);
    if(EnemyBulletHit==true){
         showing[n]=false;
         shooting[c]=false;shX=2000;
@@ -327,7 +327,7 @@ int i=floor((currentFrame++)/6%5);
         hps-=2*199/10;}
    for(int c=0; c<5; c++){
    if(shooting[c]==true){
-   EnemyBulletHit=isHit(enX, enY, 60, 60, shX, shY, 30, 30);
+   EnemyBulletHit=isHit(enX, enY, 60, 60, bullet[c][0], bullet[c][1], 30, 30);
    if(EnemyBulletHit==true){
         showing[n]=false;
         shooting[c]=false;shX=2000;
@@ -383,7 +383,7 @@ int i=floor((currentFrame++)/6%5);
    image(hp, 15, 15);
    if(hps<=0){
     hps=0;
-    gameState=END;
+  //  gameState=END;
     }
     
 
